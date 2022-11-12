@@ -57,5 +57,11 @@ public class PlayerController : MonoBehaviour
             _rigidbody.velocity = _velocity * _speed;
             _animator.SetBool("running", false);
         }
+
+        if(Input.GetKey(KeyCode.Space)) {
+            _animator.SetBool("jump",true);
+        } else {
+            _animator.SetBool("jump",false);
+        }
     }
 }
