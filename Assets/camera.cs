@@ -7,17 +7,18 @@ public class camera : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public Transform target;
-    public Vector3 offset;
+    private GameObject player;
+    private Vector3 offset;
 
     void Start()
     {
+        this.player = GameObject.Find("Unitychan");
+        offset = transform.position - player.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-       offset = new Vector3(2, 2, -5);
-       this.transform.position = target.position + offset;
+       transform.position = player.transform.position + offset;
     }
 }
