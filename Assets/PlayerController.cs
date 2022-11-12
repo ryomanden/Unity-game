@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 _velocity;
     private float _speed = 2f;
     private float _runspeed = 4f;
-
+    private float jumpPower = 5f;
     private Vector3 _aim; // 追記
     private Quaternion _playerRotation; // 追記
 
